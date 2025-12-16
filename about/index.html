@@ -86,14 +86,29 @@ Muslim Buddy support program is designed to support new Muslims with all their l
             updateThemeSetting('light');
          }
       }
-   </script> <!-- chatbot --><!-- <script src="https://www.bloort.ai/embed-snippet/8VMXKkK-5HJL-chatbot.js"></script> --><script type="module">(function(){const n="8VMXKkK-5HJL",e="https://bloort.ai",i=window.innerWidth-40,o=window.innerHeight-40,d=Math.min(400,i),r=Math.min(600,o),t=document.createElement("iframe");t.src=`${e}/embed?clientId=${encodeURIComponent(n)}`,t.style=`
+   </script> <!-- CROSS-ORIGIN <script src="https://www.bloort.ai/embed-snippet/8VMXKkK-5HJL-chatbot.js"></script> --><!-- chatbot --><!-- <script>
+(function () {
+    const clientId = '8VMXKkK-5HJL';
+    const baseUrl = 'https://bloort.ai';
+
+    const maxWidth = window.innerWidth - 40;
+    const maxHeight = window.innerHeight - 40;
+    const width = Math.min(400, maxWidth);
+    const height = Math.min(600, maxHeight);
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `${baseUrl}/embed?clientId=${encodeURIComponent(clientId)}`;
+    iframe.style = `
       position: fixed;
       bottom: 24px;
       right: 24px;
-      width: ${d}px;
-      height: ${r}px;
+      width: ${width}px;
+      height: ${height}px;
       border: none;
       z-index: 9999;
       background: transparent;
       border-radius: 12px;
-    `,document.body.appendChild(t)})();</script> </body></html>
+    `;
+    document.body.appendChild(iframe);
+  })();
+</script> --> </body></html>
